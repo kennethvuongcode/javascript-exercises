@@ -18,8 +18,8 @@ function compareAge(previous, challenger) {
 function findAge(person){
     if (person?.yearOfDeath == undefined) {
         let currentYear = new Date();
-        return currentYear.getFullYear - person.yearOfBirth;
-    }
+        person.yearOfDeath = currentYear.getFullYear();
+    } 
     return person.yearOfDeath - person.yearOfBirth;
 }
 
